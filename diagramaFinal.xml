@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/ -->
+<sql>
+<datatypes db="mssql">
+	<group label="Integer" color="rgb(238,238,170)">
+		<type label="TinyInt" length="0" sql="tinyint" re="INT" quote="" bytes="1" note="Integer data: 0 to 255"/>
+		<type label="SmallInt" length="0" sql="smallint" re="INT" quote="" bytes="2" note="Integer data: -32,768 to 32,767"/>
+		<type label="Int" length="0" sql="int" re="INT" quote="" bytes="4" note="Integer data: -2,147,483,648 to 2,147,483,647"/>
+		<type label="BigInt" length="0" sql="bigint" re="INT" quote="" bytes="8" note="Integer data: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807"/>
+	</group>
+
+	<group label="Monetary" color="rgb(238,238,170)">
+		<type label="Money" length="0" sql="money" re="FLOAT" quote="" bytes="8" note="Integer data: -922,337,203,685,477.5808 to 922,337,203,685,477.5807"/>
+		<type label="SmallMoney" length="0" sql="smallmoney" re="FLOAT" quote="" bytes="4" note="-214,748.3648 to 214,748.3647"/>
+	</group>
+
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Real" length="0" sql="real" re="FLOAT" quote="" bytes="4" note="Floating precision number data: -3.402823E+38 to 3.402823E+38"/>
+		<type label="Float" length="0" sql="float" re="FLOAT" quote="" bytes="8" note="Floating precision number data: -4.94E+324 to 4.94E+324"/>
+		<type label="Decimal" length="1" sql="decimal" re="DEC" quote="" bytes="n*" note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)"/>
+		<type label="Numeric" length="1" sql="numeric" re="DEC" quote="" bytes="n*" note="Fixed precision and scale numeric data: -10^38 +1 to 10^38 -1 (decimal and numeric are synonyms)"/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Char" length="0" sql="char" quote="'" bytes="n" note="Fixed-length character data with a maximum length of 8,000 characters"/>
+		<type label="Varchar" length="1" sql="varchar" quote="'" bytes="m &lt;= n" note="Variable-length data with a maximum of 8,000 characters"/>
+		<type label="Text" length="1" sql="text" quote="'" bytes="&lt;= 2,147,483,647" note="Variable-length data with a maximum length of 2,147,483,647 characters"/>
+		<type label="XML" length="0" sql="xml" quote="'" bytes="n" note="XML"/>
+	</group>
+
+	<group label="Unicode Character" color="rgb(255,200,200)">
+		<type label="nChar" length="0" sql="nchar" quote="'" bytes="n" note="Fixed-length Unicode data with a maximum length of 4,000 characters"/>
+		<type label="nVarchar" length="1" sql="nvarchar" quote="'" bytes="m &lt;= n" note="Variable-length Unicode data with a maximum length of 4,000 characters"/>
+		<type label="nText" length="1" sql="ntext" quote="'" bytes="&lt;= 2,147,483,647" note="Variable-length Unicode data with a maximum length of 1,073,741,823 characters"/>
+	</group>
+
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Datetime" length="0" sql="datetime" quote="" bytes="8" note="Jan 1, 1753 to Dec 31, 9999"/>
+		<type label="SmallDateTime" length="0" sql="smalldatetime" quote="" bytes="4" note="Jan 1, 1900 to Dec 31, 2079"/>
+	</group>
+
+	<group label="Binary" color="rgb(200,200,255)">
+		<type label="Binary" length="0" sql="binary" quote="'" bytes="n" note="Fixed-length binary data with a maximum length of 8,000 bytes"/>
+		<type label="Varbinary" length="1" sql="varbinary" quote="'" bytes="m &lt;= n" note="Variable-length binary data with a maximum length of 8,000 bytes"/>
+	</group>
+
+	<group label="Miscellaneous" color="rgb(200,220,255)">
+		<type label="Bit" length="0" sql="bit" quote="" bytes="1" note="Boolean: 1 or 0"/>
+		<type label="Image" length="1" sql="image" re="BLOB" quote="" bytes="0 to 2,147,483,647" note="Variable-length binary data with a maximum length of 2,147,483,647 bytes"/>
+		<type label="Timestamp" length="0" sql="timestamp" quote="" bytes="8" note="Locally unique binary number updated as a row gets updated"/>
+		<type label="SQL Variant" length="1" sql="sql_variant" quote="" bytes="" note="Stores any datatype except text, ntext, image, timestamp"/>
+		<type label="Uniqueidentifier" length="1" sql="uniqueidentifier" quote="" bytes="16" note="GUID"/>
+	</group>
+</datatypes><table x="83" y="92" name="Paciente">
+<row name="Pac_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Pac_nombre" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Pac_apePaterno" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Pac_apeMaterno" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Pac_sexo" null="1" autoincrement="0">
+<datatype>varchar(2)</datatype>
+<default>NULL</default></row>
+<row name="Pac_dni" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Pac_fechaNac" null="1" autoincrement="0">
+<datatype>datetime</datatype>
+<default>NULL</default></row>
+<row name="Pac_direccion" null="1" autoincrement="0">
+<datatype>varchar(100)</datatype>
+<default>NULL</default></row>
+<row name="Pac_telefono" null="1" autoincrement="0">
+<datatype>varchar(15)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Pac_id</part>
+</key>
+</table>
+<table x="471" y="285" name="Ticket">
+<row name="Tck_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tck_serie" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tck_numero" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tck_fecha_hora" null="1" autoincrement="0">
+<datatype>datetime</datatype>
+<default>NULL</default></row>
+<row name="His_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Area_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Pro_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="For_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Emp_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Pac_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tck_descuento" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tck_total" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Tcom_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Tck_id</part>
+</key>
+</table>
+<table x="471" y="39" name="HistorialClinico">
+<row name="His_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Pac_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Prod_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Area_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="SArea_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="His_diagnostico" null="1" autoincrement="0">
+<datatype>tinyint</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>His_id</part>
+</key>
+</table>
+<table x="819" y="78" name="Area">
+<row name="Area_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Area_nombre" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Prod_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Area_id</part>
+</key>
+</table>
+<table x="816" y="210" name="Producto">
+<row name="Prod_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Prod_nombre" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Prod_precio" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Prod_id</part>
+</key>
+</table>
+<table x="1027" y="238" name="SubArea">
+<row name="SArea_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="SArea_nombre" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Prod_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>SArea_id</part>
+</key>
+</table>
+<table x="89" y="392" name="Empleado">
+<row name="Emp_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Emp_nombre" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Emp_apePaterno" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Emp_apeMaterno" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Emp_telefono" null="1" autoincrement="0">
+<datatype>varchar(15)</datatype>
+<default>NULL</default></row>
+<row name="Emp_CMP" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Area_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="SArea_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Temp_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Emp_id</part>
+</key>
+</table>
+<table x="78" y="640" name="TipoEmpleado">
+<row name="Temp_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="Temp_tipo" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="Temp_descripcion" null="1" autoincrement="0">
+<datatype>varchar(50)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>Temp_id</part>
+</key>
+</table>
+<table x="824" y="425" name="FormaPago">
+<row name="For_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default></row>
+<row name="For_nombre" null="1" autoincrement="0">
+<datatype>varchar(15)</datatype>
+<default>NULL</default></row>
+<row name="For_plazos" null="1" autoincrement="0">
+<datatype>varchar(10)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>For_id</part>
+</key>
+</table>
+<table x="1066" y="571" name="TipoComprobante">
+<row name="id" null="1" autoincrement="1">
+<datatype>tinyint</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+</sql>
