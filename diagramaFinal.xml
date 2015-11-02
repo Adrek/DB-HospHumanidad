@@ -146,7 +146,8 @@
 </row>
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Producto" row="Prod_id" />
+</row>
 <row name="Area_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default><relation table="Area" row="Area_id" />
