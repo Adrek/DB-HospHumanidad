@@ -100,22 +100,24 @@
 <default>NULL</default></row>
 <row name="His_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="HistorialClinico" row="His_id" />
+</row>
 <row name="Area_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
-<row name="Pro_id" null="1" autoincrement="0">
+<default>NULL</default><relation table="Area" row="Area_id" />
+</row>
+<row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Producto" row="Prod_id" />
+</row>
 <row name="For_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
-<row name="Emp_id" null="1" autoincrement="0">
-<datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="FormaPago" row="For_id" />
+</row>
 <row name="Pac_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Paciente" row="Pac_id" />
+</row>
 <row name="Tck_descuento" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
@@ -124,7 +126,12 @@
 <default>NULL</default></row>
 <row name="Tcom_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="TipoComprobante" row="Tcom_id" />
+</row>
+<row name="Emp_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default><relation table="Empleado" row="Emp_id" />
+</row>
 <key type="PRIMARY" name="">
 <part>Tck_id</part>
 </key>
@@ -135,24 +142,27 @@
 <default>NULL</default></row>
 <row name="Pac_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Paciente" row="Pac_id" />
+</row>
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
 <row name="Area_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Area" row="Area_id" />
+</row>
 <row name="SArea_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="SubArea" row="SArea_id" />
+</row>
 <row name="His_diagnostico" null="1" autoincrement="0">
-<datatype>tinyint</datatype>
+<datatype>varchar(100)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>His_id</part>
 </key>
 </table>
-<table x="819" y="78" name="Area">
+<table x="812" y="493" name="Area">
 <row name="Area_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
@@ -161,12 +171,13 @@
 <default>NULL</default></row>
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Producto" row="Prod_id" />
+</row>
 <key type="PRIMARY" name="">
 <part>Area_id</part>
 </key>
 </table>
-<table x="816" y="210" name="Producto">
+<table x="990" y="406" name="Producto">
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
@@ -180,7 +191,7 @@
 <part>Prod_id</part>
 </key>
 </table>
-<table x="1027" y="238" name="SubArea">
+<table x="881" y="636" name="SubArea">
 <row name="SArea_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
@@ -189,7 +200,8 @@
 <default>NULL</default></row>
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Producto" row="Prod_id" />
+</row>
 <key type="PRIMARY" name="">
 <part>SArea_id</part>
 </key>
@@ -215,13 +227,16 @@
 <default>NULL</default></row>
 <row name="Area_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Area" row="Area_id" />
+</row>
 <row name="SArea_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="SubArea" row="SArea_id" />
+</row>
 <row name="Temp_id" null="1" autoincrement="0">
 <datatype>int</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="TipoEmpleado" row="Temp_id" />
+</row>
 <key type="PRIMARY" name="">
 <part>Emp_id</part>
 </key>
@@ -240,7 +255,7 @@
 <part>Temp_id</part>
 </key>
 </table>
-<table x="824" y="425" name="FormaPago">
+<table x="842" y="78" name="FormaPago">
 <row name="For_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
@@ -248,18 +263,25 @@
 <datatype>varchar(15)</datatype>
 <default>NULL</default></row>
 <row name="For_plazos" null="1" autoincrement="0">
-<datatype>varchar(10)</datatype>
+<datatype>int</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>For_id</part>
 </key>
 </table>
-<table x="1066" y="571" name="TipoComprobante">
-<row name="id" null="1" autoincrement="1">
-<datatype>tinyint</datatype>
+<table x="880" y="271" name="TipoComprobante">
+<row name="Tcom_id" null="1" autoincrement="0">
+<datatype>int</datatype>
 <default>NULL</default></row>
+<row name="Tcom_tipo" null="1" autoincrement="0">
+<datatype>varchar(25)</datatype>
+<default>NULL</default></row>
+<row name="For_id" null="1" autoincrement="0">
+<datatype>int</datatype>
+<default>NULL</default><relation table="FormaPago" row="For_id" />
+</row>
 <key type="PRIMARY" name="">
-<part>id</part>
+<part>Tcom_id</part>
 </key>
 </table>
 </sql>
