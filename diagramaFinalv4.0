@@ -166,13 +166,13 @@
 <datatype>int</datatype>
 <default>NULL</default></row>
 <row name="Area_nombre" null="1" autoincrement="0">
-<datatype>int</datatype>
+<datatype>varchar(50)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>Area_id</part>
 </key>
 </table>
-<table x="989" y="406" name="Producto">
+<table x="1034" y="382" name="Producto">
 <row name="Prod_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
