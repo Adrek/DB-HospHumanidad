@@ -274,7 +274,7 @@
 </key>
 </table>
 <table x="900" y="28" name="Medico">
-<row name="Med_id" null="1" autoincrement="1">
+<row name="Med_id" null="1" autoincrement="0">
 <datatype>int</datatype>
 <default>NULL</default></row>
 <row name="Med_CMP" null="1" autoincrement="0">
